@@ -1,0 +1,4 @@
+.kitchen/
+.kitchen.yml
+.kitchen.local.yml
+*.lock

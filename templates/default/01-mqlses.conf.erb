@@ -1,0 +1,25 @@
+input {
+  rabbitmq {
+    host => "127.0.0.1"
+    port => 5672
+
+    queue => "logstash"
+    durable => true
+    auto_delete => false
+
+    key => "logstash-key"
+    exchange => "logstash"
+
+    ssl => false
+    verify_ssl => false
+
+    user => <%= @user %>
+    password => <%= @password %>
+  }
+}
+
+output {
+  elasticsearch_http {
+    host => "127.0.0.1"
+  }
+}
