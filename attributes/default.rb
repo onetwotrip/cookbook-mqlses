@@ -10,7 +10,7 @@ default['java']['install_flavor'] = 'oracle'
 default['java']['jdk_version'] = '8'
 default['java']['oracle']['accept_oracle_download_terms'] = true
 
-default['rabbitmq']['use_distro_version'] = false
+default['rabbitmq']['use_distro_version'] = true
 default['rabbitmq']['cluster'] = true
 
 default['rabbitmq']['ssl']                      = true
