@@ -30,3 +30,7 @@ end
 if n['kibana']['enable']
   include_recipe 'kibana-authentication-proxy'
 end
+
+if n['nginx-ssl-proxy']['enable']
+  include_recipe 'cookbook-mqlses::nginx-ssl-proxy'
+end

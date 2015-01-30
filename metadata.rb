@@ -12,5 +12,6 @@ end
 
 depends 'apt'
 depends 'java'
+depends 'nginx'
 depends 'rabbitmq'
 depends 'kibana-authentication-proxy'

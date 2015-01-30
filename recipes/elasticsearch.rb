@@ -18,3 +18,10 @@ service 'elasticsearch' do
   supports :start => true, :restart => true, :stop => true, :status => true
   action [:enable, :start]
 end
+
+
+n['elasticsearch']['plugins'].each_pair do |name, path|
+  cookbook_mqlses_es_plugin name do
+    path path
+  end
+end
