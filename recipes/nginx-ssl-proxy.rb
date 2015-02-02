@@ -7,6 +7,7 @@
 n = node['mqlses']
 
 include_recipe 'nginx'
+include_recipe 'htpasswd'
 
 service 'nginx' do
   action :nothing
@@ -30,4 +31,11 @@ end
 
 nginx_site 'default' do
   enable false
+end
+
+n['nginx-ssl-proxy']['users'].each_pair do |user, password|
+  htpasswd n['nginx-ssl-proxy']['htpasswd_file'] do
+    user user
+    password password
+  end
 end

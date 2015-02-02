@@ -11,6 +11,11 @@ default['mqlses']['elasticsearch']['plugins'] = {
   "whatson" => 'xyu/elasticsearch-whatson',
   "paramedic" => "karmi/elasticsearch-paramedic"
 }
+default['mqlses']['nginx-ssl-proxy']['htpasswd_file'] = '/etc/nginx/conf.d/nginx-ssl-proxy.htpasswd'
+default['mqlses']['nginx-ssl-proxy']['users'] = {
+  "guest" => 'guest',
+  "guest2" => "guest2"
+}
 
 default['mqlses']['nginx-ssl-proxy']['enable'] = true
 default['mqlses']['nginx-ssl-proxy']['ssl_key'] = '/etc/gen_ssl_dir/server_key.pem'
