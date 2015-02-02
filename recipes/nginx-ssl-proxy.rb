@@ -12,9 +12,6 @@ include_recipe 'htpasswd'
 service 'nginx' do
   action :nothing
 end
-cookbook_file '/etc/nginx/conf.d/nginx-ssl-proxy.htpasswd' do
-  source 'nginx-ssl-proxy.htpasswd'
-end
 
 template '/etc/nginx/sites-available/nginx-ssl-proxy' do
   source 'nginx-ssl-proxy.erb'
