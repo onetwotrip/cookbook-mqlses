@@ -21,7 +21,6 @@ template '/etc/nginx/sites-available/nginx-ssl-proxy' do
             })
 end
 
-
 nginx_site 'nginx-ssl-proxy' do
   enable true
 end

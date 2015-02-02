@@ -28,7 +28,7 @@ if n['gen_ssl']['enable']
 end
 
 if n['kibana']['enable']
-  include_recipe 'kibana-authentication-proxy'
+  include_recipe 'cookbook-mqlses::kibana-authentication-proxy'
 end
 
 if n['nginx-ssl-proxy']['enable']
