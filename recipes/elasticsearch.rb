@@ -14,6 +14,11 @@ apt_repository 'elasticsearch' do
 end
 
 package 'elasticsearch'
+
+template '/etc/default/elasticsearch' do
+  source 'default_elasticsearch.erb'
+end
+
 service 'elasticsearch' do
   supports :start => true, :restart => true, :stop => true, :status => true
   action [:enable, :start]

@@ -7,6 +7,8 @@ default['mqlses']['user'] = 'logstash'
 default['mqlses']['password'] = 'logstash1'
 default['mqlses']['elasticsearch']['plugins'] = {
   "HQ" => 'royrusso/elasticsearch-HQ',
+  'head' => 'mobz/elasticsearch-head',
+  "whatson" => 'xyu/elasticsearch-whatson',
   "paramedic" => "karmi/elasticsearch-paramedic"
 }
 
