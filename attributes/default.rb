@@ -8,7 +8,7 @@ default['mqlses']['password'] = 'logstash1'
 default['mqlses']['elasticsearch']['plugins'] = {
   "HQ" => 'royrusso/elasticsearch-HQ',
   'head' => 'mobz/elasticsearch-head',
-  "whatson" => 'xyu/elasticsearch-whatson',
+  "bigdesk" => 'lukas-vlcek/bigdesk/2.5.0',
   "paramedic" => "karmi/elasticsearch-paramedic"
 }
 default['mqlses']['nginx-ssl-proxy']['htpasswd_file'] = '/etc/nginx/conf.d/nginx-ssl-proxy.htpasswd'
