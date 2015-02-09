@@ -1,4 +1,4 @@
-ES_HEAP_SIZE=<%= ((node.memory.total.to_i / (1024*1024)) * 0.5).round %>g
+ES_HEAP_SIZE=<%= ((node.memory.total.to_i / 1024) * 0.5).round %>m
 #ES_HEAP_NEWSIZE=
 #ES_DIRECT_SIZE=
 MAX_OPEN_FILES=655350
